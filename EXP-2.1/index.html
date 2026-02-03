@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Live_Character_Counter</title>
+</head>
+<body style="margin:150px 150px; display:flex; align-items:center; flex-direction:column; background-color:#1b56">
+    <h1 style="color:green">Live Character Counter</h1>
+    <textarea name="input-text" id="ta" rows="10" cols="50" maxlength="300" style="color:#121212; border: 6px solid blue; border-radius:10px; font-size:1.25rem"></textarea>
+    <p style="font-weight:700">Total Character : <span id="c"></span></p>
+</body>
+<script>
+   let ta = document.getElementById('ta');
+   ta.addEventListener("input", function() {
+    let len = ta.value.length;
+    document.getElementById('c').innerText = len;
+   })
+</script>
+</html>
